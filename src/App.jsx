@@ -1,7 +1,11 @@
 import './App.css'
-import TimeLine from './TimeLine'
+import Header from './Components/Header'
+import TweetEditor from './Components/Tweet-Editor'
 function App() {
- return <TimeLine/>
+ return <div className="timeline">
+      <Header/>
+      <TweetEditor/>
+    </div>
 }
 
 export default App
