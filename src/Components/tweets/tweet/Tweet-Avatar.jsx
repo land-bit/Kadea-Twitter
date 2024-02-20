@@ -1,7 +1,7 @@
-export default function TweetAvatar(){
+export default function TweetAvatar({src}){
 
     return <img 
-            src="src/assets/Tweet-Avatar/Profile-Photo-1.png" 
+            src={src}
             alt="Profil de ..." 
             className="tweet-avatar" />
 }

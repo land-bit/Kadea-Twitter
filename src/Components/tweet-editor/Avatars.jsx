@@ -1,7 +1,6 @@
 export default function Avatars() {
 
-    return <img 
+    return <div className="avatar"><img 
             src="src/assets/Avatars/Profile-Photo.png" 
-            class= "avatars" 
-            alt="Profil d'utilisateur" />
+            alt="Profil d'utilisateur" /></div>
 }
