@@ -1,4 +1,4 @@
-export default function TweetImage() {
+export default function TweetImage({image}) {
 
-    return <img src="src/assets/images/image 3.png" alt="Publication" className="tweet-image" />
+    return <img src={image} alt="Publication" className="tweet-image" />
 }

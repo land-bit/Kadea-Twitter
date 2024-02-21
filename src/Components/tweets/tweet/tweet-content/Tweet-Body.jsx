@@ -8,7 +8,7 @@ export default function TweetBody({user, content}) {
         <div className="tweet-body">
             <TweetTitle name = {user.name} time = {user.time}/>
             <TweetText text = {content.text}/>
-            <TweetImage/>
+            {content && content.srcImage && <TweetImage image = {content.srcImage}/>}
         </div>
     )
 }
