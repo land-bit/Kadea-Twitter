@@ -4,7 +4,7 @@ export default function TweetActions() {
 
     return (
         <div className="tweet-actions">
-            <TweetAction/>
+            <TweetAction />
         </div>
     )
 }

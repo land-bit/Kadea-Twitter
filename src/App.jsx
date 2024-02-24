@@ -7,9 +7,9 @@ function App() {
   const d = 'firm'
   return (
     <div className="timeline">
-      <Header/>
-      <TweetEditor/>
-      <Tweets/>
+      <Header />
+      <TweetEditor />
+      <Tweets />
     </div>
   )
 }

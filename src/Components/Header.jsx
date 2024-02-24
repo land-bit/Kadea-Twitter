@@ -3,10 +3,10 @@ import TopTweet from "./header/Top-Tweet";
 
 export default function Header() {
 
-    return(
+    return (
         <div className="header">
-            <PageTitle/>
-            <TopTweet/>
+            <PageTitle />
+            <TopTweet />
         </div>
     )
 }

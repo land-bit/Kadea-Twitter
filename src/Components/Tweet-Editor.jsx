@@ -5,8 +5,8 @@ export default function TweetEditor() {
 
     return (
         <div className="tweet-editor">
-            <Avatars/>
-            <TweetEditorForm/>
+            <Avatars />
+            <TweetEditorForm />
         </div>
     )
 }
