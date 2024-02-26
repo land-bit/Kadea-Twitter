@@ -6,7 +6,7 @@ export default function TweetContent({ data }) {
     return (
         <div className="tweet-content">
             <TweetBody user={data.user} content={data.content} />
-            <TweetActions />
+            <TweetActions actions={data.actions}/>
         </div>
     )
 }
