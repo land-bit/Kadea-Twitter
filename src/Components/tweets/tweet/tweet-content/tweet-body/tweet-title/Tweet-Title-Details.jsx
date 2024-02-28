@@ -1,8 +1,8 @@
-export default function TweetTitleDetails({ name, time }) {
+export default function TweetTitleDetails({ username, time }) {
 
     return (
         <div className="tweet-title-details">
-            @{name + ' . ' + time}
+            @{username + ' . ' + time}
         </div>
     )
 }

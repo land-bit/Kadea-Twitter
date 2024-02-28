@@ -6,6 +6,7 @@ export default function Tweets() {
         {
             user: {
                 name: 'CNN',
+                userName: 'cnn',
                 time: '7m',
                 src: '/Tweet-Avatar/Profile-Photo-1.png'
             },
@@ -21,6 +22,7 @@ export default function Tweets() {
         {
             user: {
                 name: 'The New York Times',
+                userName: 'nytimes',
                 time: '2h',
                 src: '/Tweet-Avatar/Profile-Photo6.png'
             },
@@ -37,6 +39,7 @@ export default function Tweets() {
         {
             user: {
                 name: 'Twitter',
+                userName: 'twitter',
                 time: 'Oct 29',
                 src: '/Tweet-Avatar/Profile-Photo-2.png'
             },
@@ -52,6 +55,7 @@ export default function Tweets() {
         {
             user: {
                 name: 'Twitter',
+                userName: 'twitter',
                 time: 'Oct 4',
                 src: '/Tweet-Avatar/Profile-Photo-2.png'
             },
@@ -67,6 +71,7 @@ export default function Tweets() {
         {
             user: {
                 name: 'Twitter',
+                userName: 'twitter',
                 time: 'Oct 4',
                 src: '/Tweet-Avatar/Profile-Photo-2.png'
             },

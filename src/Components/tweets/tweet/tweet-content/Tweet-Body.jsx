@@ -6,7 +6,7 @@ export default function TweetBody({ user, content }) {
 
     return (
         <div className="tweet-body">
-            <TweetTitle name={user.name} time={user.time} />
+            <TweetTitle name={user.name} userName={user.userName} time={user.time} />
             <TweetText text={content.text} />
             {content && content.srcImage && <TweetImage image={content.srcImage} />}
         </div>
