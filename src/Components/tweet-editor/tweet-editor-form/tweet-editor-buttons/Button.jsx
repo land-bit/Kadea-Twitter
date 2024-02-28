@@ -1,4 +1,4 @@
 export default function Button() {
-    
-     return <button className="button">TWEET</button>
+
+     return <button className="button">Tweet</button>
 }
