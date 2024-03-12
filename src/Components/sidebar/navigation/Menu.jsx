@@ -7,8 +7,8 @@ export default function Menu({donnee}) {
         alignItems : 'center',
         gap : '20px'
     }}>
-      <span>{donnee.logoAfter}</span>
-      <h4>{donnee.text}</h4>
+      <span><img src={donnee.logoAfter} alt="" style={{width : '30px'}}/></span>
+      <h2 style={{fontWeight:'100'}}>{donnee.text}</h2>
     </div>
   )
 }

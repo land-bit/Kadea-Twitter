@@ -7,7 +7,7 @@ import Tweets from './Components/Tweets'
 function App() {
   return (
     <>
-      <div><Sidebar/></div>
+      <div className='sidebar'><Sidebar/></div>
       <div className="timeline">
         <Header />
         <TweetEditor />
