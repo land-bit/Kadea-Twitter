@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './Components/Header'
 import Sidebar from './Components/Sidebar'
+import Trends from './Components/Trends'
 import TweetEditor from './Components/Tweet-Editor'
 import Tweets from './Components/Tweets'
 
@@ -13,7 +14,7 @@ function App() {
         <TweetEditor />
         <Tweets />
       </div>
-      <div></div>
+      <div className='trends'><Trends/></div>
     </>
   )
 }

@@ -6,7 +6,7 @@ export default function Navigation() {
     <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap:'3vh'
+        gap:'2.5vh'
     }}>
       {nav.map((e,i)=><Menu key={i} donnee={e}/>)}
     </div>

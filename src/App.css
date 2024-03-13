@@ -20,10 +20,14 @@ body {
     justify-content: space-between;
 }
 .sidebar{
-    flex : 0 0 200px;
+    flex : 0 0 25%;
+}
+.trends{
+    flex : 0 0 25%;
 }
 .timeline {
-    flex: 0 0 800px;
+    position: relative;
+    flex: 0 0 50%;
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
