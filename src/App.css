@@ -36,6 +36,9 @@ body {
  color:gray;
  font-size: 14px
 }
+.trend-body h4{
+    font-size: 14px
+   }
 .header {
     padding: 1.5rem 1rem;
     display: flex;
@@ -216,4 +219,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+.links li a{
+    text-decoration: none;
+    color: gray;
 }

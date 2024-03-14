@@ -1,9 +1,10 @@
 import React from "react";
-import TrendTitle from "./trend-list/TrendTitle";
-import TrendBody from "./trend-list/TrendBody";
 import { trends } from "../..";
+import { exempleDB } from "../..";
+import FolowTitle from "./folow-list/FolowTitle";
+import FolowBody from "./folow-list/FolowBody";
 
-export default function TrendList() {
+export default function FolowList() {
   return (
     <div
       style={{
@@ -15,9 +16,9 @@ export default function TrendList() {
         paddingBottom: "20px",
       }}
     >
-      <TrendTitle />
+      <FolowTitle />
       {trends.map((e, i) => (
-        <TrendBody key={i} />
+        <FolowBody key={i} data={exempleDB[i]} />
       ))}
       <a
         href="#"
