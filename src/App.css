@@ -32,7 +32,10 @@ body {
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
 }
-
+.trend-body p{
+ color:gray;
+ font-size: 14px
+}
 .header {
     padding: 1.5rem 1rem;
     display: flex;

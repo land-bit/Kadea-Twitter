@@ -144,3 +144,5 @@ export const exempleDB = [
         }
     }
 ]
+
+export const trends = [0,1,2,3]

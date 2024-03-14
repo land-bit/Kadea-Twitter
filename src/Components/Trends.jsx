@@ -1,11 +1,14 @@
-import React from 'react'
-import SearchBar from './trends/SearchBar'
+import React from "react";
+import SearchBar from "./trends/SearchBar";
+import TrendList from "./trends/TrendList";
 
 export default function Trends() {
   return (
     <div>
-        <div style={{display:'flex', justifyContent:'center'}}><SearchBar/></div>
-      
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center",alignItems:"center" }}>
+        <SearchBar />
+        <TrendList/>
+      </div>
     </div>
-  )
+  );
 }
