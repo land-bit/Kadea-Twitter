@@ -13,6 +13,8 @@ export default function Trends() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          position: "sticky",
+          bottom: "0",
         }}
       >
         <SearchBar />

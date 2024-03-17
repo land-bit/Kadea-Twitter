@@ -3,7 +3,7 @@ import React from "react";
 export default function Links() {
   return (
     <div>
-      <ul className="links" style={{ listStyle: "none" }}>
+      <ul className="links" style={{ listStyle: "none", fontSize: "14px" }}>
         <div style={{ display: "flex", gap: "15px" }}>
           <li>
             <a href="#">Terms of Service</a>
