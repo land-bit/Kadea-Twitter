@@ -14,7 +14,7 @@ export default function Comment({ Csvg, color }) {
           width="26.80"
           height="26.80"
           rx="14.4"
-          fill="#FFF"
+          fill={Csvg}
           strokewidth="0"
         />
         <path

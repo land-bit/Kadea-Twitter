@@ -209,11 +209,13 @@ body {
 }
 
 .tweet-actions svg {
-    width: 1rem;
+    width: 2rem;
     height: auto;
     color: #2F3336;
 }
-
+.hover svg{
+    color: #f8358a;
+}
 .tweet-action {
     display: flex;
     align-items: center;

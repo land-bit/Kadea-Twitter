@@ -1,20 +1,20 @@
 import React from "react";
 
-export default function Retweet({ Csize, color }) {
+export default function Retweet({ Csvg, color }) {
   return (
     <div>
       <svg
-        viewBox="0 0 20 15"
+        viewBox="-6.4 -9.4 33.8 33.8"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
-          x="-4.4"
-          y="-5.4"
-          width="26.80"
-          height="26.80"
+          x="-6.4"
+          y="-9.4"
+          width="32.80"
+          height="32.80"
           rx="14.4"
-          fill="#FFF"
+          fill={Csvg}
           strokewidth="0"
         />
         <path

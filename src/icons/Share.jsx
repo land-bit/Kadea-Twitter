@@ -1,16 +1,20 @@
 import React from "react";
 
-export default function Share({ Csize, color }) {
+export default function Share({ Csvg, color }) {
   return (
     <div>
-      <svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="-5.4 -4.4 28.8 28.8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <rect
-          x="-4.4"
-          y="-5.4"
-          width="26.80"
-          height="26.80"
+          x="-5.4"
+          y="-4.4"
+          width="28.80"
+          height="28.80"
           rx="14.4"
-          fill="#FFF"
+          fill={Csvg}
           strokewidth="0"
         />
         <path

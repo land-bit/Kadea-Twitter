@@ -3,14 +3,18 @@ import React from "react";
 export default function Like({ Csvg, color }) {
   return (
     <div>
-      <svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect
+      <svg
+        viewBox="-4.4 -6.4 27.8 27.8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
           x="-4.4"
-          y="-5.4"
-          width="26.80"
-          height="26.80"
+          y="-6.4"
+          width="27.80"
+          height="27.80"
           rx="14.4"
-          fill="#FFF"
+          fill={Csvg}
           strokewidth="0"
         />
         <path
