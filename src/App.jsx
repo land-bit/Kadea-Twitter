@@ -1,9 +1,7 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
 import Trends from "./Components/Trends";
-import TweetEditor from "./Components/Tweet-Editor";
-import Tweets from "./Components/Tweets";
 
 function App() {
   return (
@@ -12,9 +10,7 @@ function App() {
         <Sidebar />
       </div>
       <div className="timeline">
-        <Header />
-        <TweetEditor />
-        <Tweets />
+        <Outlet />
       </div>
       <div className="trends">
         <Trends />
