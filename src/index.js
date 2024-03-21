@@ -22,41 +22,49 @@ export const nav = [
     {
         logoAfter : homeAfter,
         logoBefore : homeBefore,
-        text : 'Home'
+        text: 'Home',
+        path:"/"
     },
     {
         logoAfter : exploreAfter,
         logoBefore :exploreBefore,
-        text : 'Explore'
+        text: 'Explore',
+        path:"/"
     },
     {
         logoAfter : notiAfter,
         logoBefore :notiBefore,
-        text : 'Notifications'
+        text: 'Notifications',
+        path:"/"
     },
     {
         logoAfter : messageAfter,
         logoBefore :messageBefore,
-        text : 'Messages'
+        text: 'Messages',
+        path:"/"
     },
     {
         logoAfter : bookmarksAfter,
         logoBefore :bookmarksBefore,
-        text : 'Bookmarks'
+        text: 'Bookmarks',
+        path:"/"
     },
     {
         logoAfter : listsAfter,
         logoBefore :listsBefore,
-        text : 'Lists'
+        text: 'Lists',
+        path:"/"
     },
     {
         logoAfter : profileAfter,
         logoBefore :profileBefore,
-        text : 'Profile'
+        text: 'Profile',
+        path:"/bradley_"
     },
     {
         logoAfter : more,
-        text : 'More'
+        text: 'More',
+        path:"/"
     },
 ]
 

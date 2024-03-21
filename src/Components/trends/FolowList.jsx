@@ -9,11 +9,11 @@ export default function FolowList() {
     <div
       style={{
         backgroundColor: "#202327",
-        padding: "0  2.5vw",
+        padding: "0  2vw",
         width: "90%",
         borderRadius: "30px",
         margin: "2vh",
-        paddingBottom: "20px",
+        paddingBottom: "23px",
       }}
     >
       <FolowTitle />

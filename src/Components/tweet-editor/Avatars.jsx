@@ -1,6 +1,9 @@
-export default function Avatars() {
+import { Link } from "react-router-dom";
 
-    return <div className="avatar"><img
-        src="/Avatars/Profile-Photo.png"
-        alt="Profil d'utilisateur" /></div>
+export default function Avatars() {
+  return (
+    <Link to="/bradley_" className="avatar">
+      <img src="/Avatars/Profile-Photo.png" alt="Profil d'utilisateur" />
+    </Link>
+  );
 }

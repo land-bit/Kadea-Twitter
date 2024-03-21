@@ -20,10 +20,10 @@ body {
     justify-content: space-between;
 }
 .sidebar{
-    flex : 0 0 25%;
+    flex : 0 0 22%;
 }
 .trends{
-    flex : 0 0 25%;
+    flex : 0 0 28%;
 }
 .timeline {
     position: relative;

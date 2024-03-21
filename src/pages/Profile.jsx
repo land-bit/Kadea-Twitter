@@ -5,7 +5,7 @@ export default function Profile() {
   const { userName } = useParams();
   return (
     <div style={{ margin: "40vh auto", textAlign: "center" }}>
-      <h1>Profil de {userName}</h1>
+      <h1>Profil de @{userName}</h1>
     </div>
   );
 }

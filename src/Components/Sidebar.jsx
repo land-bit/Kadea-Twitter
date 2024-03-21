@@ -9,7 +9,7 @@ export default function Sidebar() {
       <div
         style={{
           position: "fixed",
-          padding: "5vh 5vw",
+          padding: "5vh 3vw",
           paddingRight: "2vw",
           width: "25%",
           height: "100vh",
