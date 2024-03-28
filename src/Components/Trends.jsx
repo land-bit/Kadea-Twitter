@@ -7,14 +7,7 @@ import FolowList from "./trends/FolowList";
 export default function Trends() {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="flex flex-col justify-center items-center">
         <SearchBar />
         <TrendList />
         <FolowList />

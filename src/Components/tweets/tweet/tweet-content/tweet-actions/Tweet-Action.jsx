@@ -1,13 +1,13 @@
 export default function TweetAction({ action, verify }) {
   return (
-    <div
+    <button
       title={action.title}
       className="tweet-action"
       onMouseEnter={verify}
       onMouseLeave={verify}
-      style={{ color: action.color, cursor: "pointer" }}
+      style={{ color: action.color }}
     >
       {action.logo} {action.nbr && action.nbr}
-    </div>
+    </button>
   );
 }

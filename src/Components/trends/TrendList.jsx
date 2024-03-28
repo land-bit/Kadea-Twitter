@@ -5,27 +5,12 @@ import { trends } from "../..";
 
 export default function TrendList() {
   return (
-    <div
-      style={{
-        backgroundColor: "#202327",
-        padding: "0  2.5vw",
-        width: "90%",
-        borderRadius: "30px",
-        margin: "2vh",
-        paddingBottom: "20px",
-      }}
-    >
+    <div className="bg-[#202327] px-[2.5vw] w-[90%] rounded-[30px] m-[2vh] pb-2">
       <TrendTitle />
       {trends.map((e, i) => (
         <TrendBody key={i} />
       ))}
-      <a
-        href="#"
-        style={{
-          color: "#005fa8",
-          textDecoration: "none",
-        }}
-      >
+      <a href="#" className="link text-[#005fa8]">
         show more
       </a>
     </div>

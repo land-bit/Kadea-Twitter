@@ -3,10 +3,10 @@ import more from "/Icons/More (1).svg";
 
 export default function TrendBody() {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <div className="text-[gray] text-xs">
+    <div className="flex justify-between py-1">
+      <div className="text-[gray] text-sm">
         <p>Trending in Turkey</p>
-        <h4 className="text-slate-300">#SQUID</h4>
+        <h4 className="text-slate-300 text-base">#SQUID</h4>
         <p>2,066 Tweets</p>
       </div>
       <img src={more} alt="" />

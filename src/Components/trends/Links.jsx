@@ -3,8 +3,8 @@ import React from "react";
 export default function Links() {
   return (
     <div>
-      <ul className="links" style={{ listStyle: "none", fontSize: "14px" }}>
-        <div style={{ display: "flex", gap: "15px" }}>
+      <ul className="link list-none text-sm text-[gray]">
+        <div className="flex justify-between gap-[10px]">
           <li>
             <a href="#">Terms of Service</a>
           </li>
@@ -15,7 +15,7 @@ export default function Links() {
             <a href="#">Cookie Policy</a>
           </li>
         </div>
-        <div style={{ display: "flex", gap: "15px" }}>
+        <div className="flex justify-between gap-[10px]">
           <li>
             <a href="#">Accessibility</a>
           </li>
