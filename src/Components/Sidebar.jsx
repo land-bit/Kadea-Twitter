@@ -6,15 +6,7 @@ import ProfilSitting from "./sidebar/ProfilSitting";
 export default function Sidebar() {
   return (
     <div>
-      <div
-        style={{
-          position: "fixed",
-          padding: "5vh 3vw",
-          paddingRight: "2vw",
-          width: "25%",
-          height: "100vh",
-        }}
-      >
+      <div className="fixed py-[5vh] px-[5vh] h-screen w-1/4">
         <Navigation />
         <Buttons />
         <ProfilSitting />

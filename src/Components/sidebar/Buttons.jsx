@@ -1,12 +1,5 @@
 import React from "react";
 
 export default function Buttons() {
-  return (
-    <button
-      className="button"
-      style={{ width: "90%", margin: "3vh 0", padding: "2vh" }}
-    >
-      Tweet
-    </button>
-  );
+  return <button className="button w-[90%] my-[3vh] p-[2vh]">Tweet</button>;
 }

@@ -101,6 +101,6 @@ body {
         @apply flex items-center justify-center gap-5
     }
     .link{
-        @apply text-[gray] no-underline
+        @apply text-white no-underline
     }   
 }

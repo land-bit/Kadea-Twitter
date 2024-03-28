@@ -3,16 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Menu({ donnee }) {
   return (
-    <Link
-      to={donnee.path}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "20px",
-        color: "white",
-        textDecoration: "none",
-      }}
-    >
+    <Link to={donnee.path} className="flex items-center gap-4 link text-2xl">
       <span>
         <img src={donnee.logoAfter} alt="" style={{ width: "30px" }} />
       </span>
