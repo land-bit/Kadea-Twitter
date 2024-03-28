@@ -3,6 +3,7 @@ export default function TweetTitleAuthor({ name }) {
     <>
       <div className="tweet-title-author">{name + " "}</div>
       <svg
+        className="w-5 h-auto"
         width="10"
         height="10"
         viewBox="0 0 18 18"

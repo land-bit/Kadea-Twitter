@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-}
-
+} 
 body {
     background-color: black;
     color: white;
@@ -19,210 +20,87 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.sidebar{
-    flex : 0 0 22%;
-}
-.trends{
-    flex : 0 0 28%;
-}
-.timeline {
-    position: relative;
-    flex: 0 0 50%;
-    font-family: 'Inter', sans-serif;
-    border-left: 1px solid #2F3336;
-    border-right: 1px solid #2F3336;
-}
-.trend-body p{
- color:gray;
- font-size: 14px
-}
-.trend-body h4{
-    font-size: 14px
-   }
-.header {
-    padding: 1.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #2F3336;
-}
 
-.top-tweets {
-    width: 1.5rem;
-    height: auto;
-}
-
-.page-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.tweet-editor {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: .3rem 1rem;
-    border-bottom: 1px solid #2F3336;
-}
-
-.avatar {
-    flex: 0 0 70px;
-    /*padding: 0 rem;*/
-}
-
-.avatar img {
-    max-width: 100%;
-    max-height: 100px;
-    border-radius: 100%;
-}
-
-.tweet-editor-form {
-    flex: auto;
-}
-
-.tweet-editor-input {
-    height: 60px;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    background-color: black;
-    color: white;
-    resize: none;
-    padding: 10px 0 0 0;
-    margin: 13px 0;
-}
-
-.tweet-editor-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.tweet-editor-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /*padding: 0.8rem 0;*/
-    gap: 1rem;
-}
-
-.tweet-editor-actions button {
-    background-color: transparent;
-    border: none;
-}
-
-.button {
-    text-transform: capitalize;
-    padding: .7rem 1.5rem;
-    border: none;
-    border-radius: 50px;
-    background-color: #1D9BF0;
-    color: white;
-    font-size: 1rem;
-}
-
-.tweet {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 1.5rem 1rem;
-    border-bottom: 1px solid #2F3336;
-}
-
-.tweet-avatar {
-    /*height: 70px;*/
-    /*width: 70px;*/
-    flex: 0 0 70px;
-}
-
-.tweet-avatar img {
-    max-width: 100%;
-    max-height: 100px;
-    border-radius: 100%;
-}
-
-.tweet-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 30px;
-    width: 100%;
-}
-
-.tweet-body {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.tweet-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-.tweet-title svg {
-    width: 1.2rem;
-    height: auto;
-}
-
-.tweet-title-author {
-    font-size: 1rem;
-}
-
-.tweet-title-details {
-    color: #6E767D;
-}
-
-.tweet-text {
-    color: #D9D9D9;
-    font-size: 1rem;
-}
-
-.tweet-image {
-    width: 100%;
-    padding: .3rem 0 0 0;
-}
-
-.tweet-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50px;
-    border-color: #2F3336;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.tweet-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    color: grey;
-    font-size: 1rem;
-}
-
-.tweet-actions svg {
-    width: 2rem;
-    height: auto;
-    color: #2F3336;
-}
-.hover svg{
-    color: #f8358a;
-}
-.tweet-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.links li a{
-    text-decoration: none;
-    color: gray;
+@layer components{
+    .sidebar {
+        @apply flex-[0_0_22%]
+    }
+    .trends {
+        @apply flex-[0_0_28%]
+    }
+    .timeline{
+        @apply relative flex-[0_0_50%] border-x border-[#2F3336] border-solid
+    }
+    .header{
+        @apply px-6 py-4 flex items-center justify-between border-b border-solid border-[#2F3336]
+    }
+    .top-tweets{
+        @apply w-6 h-auto
+    }
+    .page-title{
+        @apply text-2xl font-bold
+    }
+    .tweet-editor{
+        @apply flex items-start justify-start gap-[20px] px-[.3rem] py-4 border-b border-solid border-[#2F3336]
+    }
+    .avatar{
+        @apply flex-[0_0_70px]
+    }
+    .tweet-editor-form{
+        @apply flex-auto
+    }
+    .tweet-editor-input{
+        @apply h-[60] w-full border-none outline-none text-2xl bg-black text-white resize-none pt-[10px] my-[13px]
+    }
+    .tweet-editor-buttons{
+        @apply flex items-center justify-between
+    }
+    .tweet-editor-actions{
+        @apply flex items-center justify-start gap-4
+    }
+    .button{
+        @apply capitalize py-[.7rem] px-6 border-none rounded-[50px] bg-[#1D9BF0] text-white text-base w-fit h-fit
+    }
+    .tweet{
+        @apply flex justify-start items-start gap-[20px] py-6 px-4 border-b border-solid border-[#2F3336]
+    }
+    .tweet-avatar{
+        @apply flex-[0_0_70px] max-w-full max-h-[100px] rounded-full
+    }
+    .tweet-content{
+        @apply flex flex-col items-start justify-start gap-[30px] w-full
+    }
+    .tweet-body{
+        @apply flex flex-col gap-2
+    }
+    .tweet-title{
+        @apply flex justify-start items-start gap-[10px] text-base
+    }
+    .tweet-title-author{
+        @apply text-base
+    }
+    .tweet-title-details{
+        @apply text-[#6E767D]
+    }
+    .tweet-text{
+        @apply text-[#D9D9D9] text-base
+    }
+    .tweet-image{
+        @apply w-full pt-[.3rem]
+    }
+    .tweet-image{
+        @apply max-w-full h-auto rounded-[50px] border-[#2F3336] border-solid border
+    }
+    .tweet-actions{
+        @apply flex justify-center items-center gap-20 text-[gray] text-base
+    }
+    .tweet-actions svg{
+        @apply w-8 h-auto text-[#2F3336]
+    }
+    .tweet-action{
+        @apply flex items-center justify-center gap-5
+    }
+    .link{
+        @apply text-[gray] no-underline
+    }   
 }
