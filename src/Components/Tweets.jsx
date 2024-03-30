@@ -1,13 +1,12 @@
 import Tweet from "./tweets/Tweet";
-import { exempleDB } from "../index";
+import data from "../data/initial-data.json";
 
 export default function Tweets() {
-
-    return (
-        <div className="tweets">
-            {
-                exempleDB.map((e, i) => <Tweet key={i} data={e} />)
-            }
-        </div>
-    )
+  return (
+    <div className="tweets">
+      {data.tweets.map((e, i) => (
+        <Tweet key={i} data={e} />
+      ))}
+    </div>
+  );
 }

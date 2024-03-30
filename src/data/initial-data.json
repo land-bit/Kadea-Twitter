@@ -1,0 +1,138 @@
+{
+    "current-user" : {
+        "name": "Bradley Ortiz",
+        "userName": "bradley_",
+        "time": "maintenant",
+        "src": "/Tweet-Avatar/Profile-Photo.png"
+    },
+    "tweets" : [
+        {
+            "user": {
+                "name": "CNN",
+                "userName": "cnn",
+                "time": "7m",
+                "src": "/Tweet-Avatar/Profile-Photo-1.png"
+            },
+            "content": {
+                "text": "President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a \"major breakthrough\" that would serve to both strengthen the US steel industry and combat the global climate crisis."
+            },
+            "actions": {
+                "comments": "54",
+                "retweet": "144",
+                "like": "184"
+            }
+        },
+        {
+            "user": {
+                "name": "The New York Times",
+                "userName": "nytimes",
+                "time": "2h",
+                "src": "/Tweet-Avatar/Profile-Photo6.png"
+            },
+            "content": {
+                "text": "Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land",
+                "srcImage": "/images/image 3.png"
+            },
+            "actions": {
+                "comments": "19",
+                "retweet": "48",
+                "like": "482"
+            }
+        },
+        {
+            "user": {
+                "name": "Twitter",
+                "userName": "twitter",
+                "time": "Oct 29",
+                "src": "/Tweet-Avatar/Profile-Photo-2.png"
+            },
+            "content": {
+                "text": "BIG NEWS lol jk still Twitter"
+            },
+            "actions": {
+                "comments": "6.8k",
+                "retweet": "36.8k",
+                "like": "267.1k"
+            }
+        },
+        {
+            "user": {
+                "name": "Twitter",
+                "userName": "twitter",
+                "time": "Oct 4",
+                "src": "/Tweet-Avatar/Profile-Photo-2.png"
+            },
+            "content": {
+                "text": "hello literally everyone"
+            },
+            "actions": {
+                "comments": "118.7k",
+                "retweet": "785.4k",
+                "like": "3.3k"
+            }
+        },
+        {
+            "user": {
+                "name": "Twitter",
+                "userName": "twitter",
+                "time": "Oct 4",
+                "src": "/Tweet-Avatar/Profile-Photo-2.png"
+            },
+            "content": {
+                "text": "hello literally everyone",
+                "srcImage": "/images/image 3.png"
+            },
+            "actions": {
+                "comments": "118.7k",
+                "retweet": "785.4k",
+                "like": "3.3k"
+            }
+        }
+    ],
+    "nav" : [
+        {
+            "logoAfter" : "public/Icons/Twitter.svg"
+        },
+        {
+            "logoAfter" : "public/Icons/Home.svg",
+            "text": "Home",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "public/Icons/Explore.svg",
+            "text": "Explore",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "public/Icons/Notifications.svg",
+            "text": "Notifications",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "public/Icons/Messages.svg",
+            "text": "Messages",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "public/Icons/Bookmarks.svg",
+            "text": "Bookmarks",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "/public/Icons/Lists-Fill.svg",
+            "text": "Lists",
+            "path":"/"
+        },
+        {
+            "logoAfter" : "public/Icons/Profile.svg",
+            "text": "Profile",
+            "path":"/bradley_"
+        },
+        {
+            "logoAfter" : "public/Icons/More.svg",
+            "text": "More",
+            "path":"/"
+        }
+    ],  
+    "trends" : ["0","1","2","3"]
+}
