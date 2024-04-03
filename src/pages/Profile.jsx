@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { TweetContext } from "../contexts/tweets";
+import Tweet from "../Components/tweets/Tweet";
 
 export default function Profile() {
   const { userName } = useParams();
+  const tweet = useContext(TweetContext);
   return (
-    <div className="my-[40vh] mx-auto text-center text-6xl">
-      <h1>Profil de @{userName}</h1>
+    <div>
+      <h1 className="my-[10vh] mx-auto text-center text-6xl">
+        Profil de @{userName}
+      </h1>
+      {tweet.tweets
+        .filter((e) => e.user.userName == userName)
+        .map((el, i) => (
+          <Tweet key={i} data={el} />
+        ))}
     </div>
   );
 }

@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Comment from "../../../../icons/Comment";
 import Like from "../../../../icons/Like";
 import Retweet from "../../../../icons/Retweet";
 import Share from "../../../../icons/Share";
 import TweetAction from "./tweet-actions/Tweet-Action";
+import { TweetContext } from "../../../../contexts/tweets";
 
-export default function TweetActions({ actions }) {
+export default function TweetActions() {
   const [state, setState] = useState(Array(4).fill(false));
   const [action, setAction] = useState(Array(4).fill(true));
+  const tweet = useContext(TweetContext);
   const verify = (i) => {
     const newSvg = state.slice();
     newSvg[i] = !newSvg[i];
@@ -26,7 +28,7 @@ export default function TweetActions({ actions }) {
           color={state[0] ? "#1d52f0" : "#6E767D"}
         />
       ),
-      nbr: actions.comments,
+      nbr: tweet.actions.comments,
       title: "Comment",
       color: state[0] ? "#1d52f0" : "#6E767D",
     },
@@ -38,7 +40,7 @@ export default function TweetActions({ actions }) {
           color={state[1] ? "#1df040" : "#6E767D"}
         />
       ),
-      nbr: actions.retweet,
+      nbr: tweet.actions.retweet,
       title: "Retweet",
       color: state[1] ? "#1df040" : "#6E767D",
     },
@@ -50,7 +52,10 @@ export default function TweetActions({ actions }) {
           like={action[2]}
         />
       ),
-      nbr: action[2] ? actions.like : actions.like + 1,
+      nbr:
+        action[2] || tweet.actions.like[tweet.actions.like.length - 1] == "k"
+          ? tweet.actions.like
+          : Number(tweet.actions.like) + 1,
       title: "Like",
       color: state[2] ? "#f8358a" : "#6E767D",
     },

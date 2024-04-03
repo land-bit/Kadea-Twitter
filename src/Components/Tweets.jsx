@@ -1,10 +1,9 @@
 import Tweet from "./tweets/Tweet";
-import data from "../data/initial-data.json";
 
-export default function Tweets() {
+export default function Tweets({ tweets }) {
   return (
     <div className="tweets">
-      {data.tweets.map((e, i) => (
+      {tweets.map((e, i) => (
         <Tweet key={i} data={e} />
       ))}
     </div>
