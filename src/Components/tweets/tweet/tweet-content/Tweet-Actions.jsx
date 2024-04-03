@@ -8,8 +8,14 @@ import { TweetContext } from "../../../../contexts/tweets";
 
 export default function TweetActions() {
   const [state, setState] = useState(Array(4).fill(false));
-  const [action, setAction] = useState(Array(4).fill(true));
   const tweet = useContext(TweetContext);
+  const [action, setAction] = useState([
+    "true",
+    "true",
+    tweet.actions.state,
+    "true",
+  ]);
+
   const verify = (i) => {
     const newSvg = state.slice();
     newSvg[i] = !newSvg[i];
@@ -17,9 +23,10 @@ export default function TweetActions() {
   };
   const handleClick = (i) => {
     const newAction = action.slice();
-    newAction[i] = !newAction[i];
+    newAction[i] = action[i] == "true" ? "false" : "true";
     setAction(newAction);
   };
+  tweet.actions.state = action[2] == "true" ? "true" : "false";
   const acts = [
     {
       logo: (
@@ -49,13 +56,15 @@ export default function TweetActions() {
         <Like
           Csvg={state[2] && "#f8358a22"}
           color={state[2] ? "#f8358a" : "#6E767D"}
-          like={action[2]}
+          like={tweet.actions.state}
         />
       ),
       nbr:
-        action[2] || tweet.actions.like[tweet.actions.like.length - 1] == "k"
+        tweet.actions.like[tweet.actions.like.length - 1] == "k"
           ? tweet.actions.like
-          : Number(tweet.actions.like) + 1,
+          : tweet.actions.state == "false"
+          ? Number(tweet.actions.like) + 1
+          : Number(tweet.actions.like),
       title: "Like",
       color: state[2] ? "#f8358a" : "#6E767D",
     },
