@@ -3,10 +3,21 @@ import "./App.css";
 import Sidebar from "./Components/Sidebar";
 import Trends from "./Components/Trends";
 import { TweetContext } from "./contexts/tweets";
-import json from "./data/initial-data.json";
+import axios from "axios";
+import { useState } from "react";
 
 function App() {
-  const data = { ...json };
+  const [data, setData] = useState(null);
+  axios
+    .get("http://localhost:3000")
+    .then((response) => {
+      setData(response);
+      console.log(response);
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
+
   return (
     <>
       <TweetContext.Provider value={data}>
