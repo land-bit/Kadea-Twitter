@@ -6,7 +6,12 @@ import { TweetContext } from "../../contexts/tweets";
 import axios from "axios";
 
 export default function TweetEditorForm({ tweets, setTweets }) {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const { current } = useContext(TweetContext);
   const input = useRef();
 
@@ -30,6 +35,9 @@ export default function TweetEditorForm({ tweets, setTweets }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="tweet-editor-form">
       <TweetEditorInput register={register} refs={input} />
+      {errors.text && (
+        <p className="text-red-600 italic">{errors.text.message}</p>
+      )}
       <TweetEditorButtons />
     </form>
   );
