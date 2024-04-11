@@ -5,13 +5,13 @@ import Header from "../Components/Header";
 import { TweetContext } from "../contexts/tweets";
 
 export default function Timeline() {
-  const tweet = useContext(TweetContext);
-  const [tab, setTab] = useState(tweet.tweets);
+  const { tweets } = useContext(TweetContext);
+  const [tab, setTab] = useState(tweets);
   return (
     <div>
       <Header />
       <TweetEditor tweets={tab} setTweets={setTab} />
-      <Tweets tweets={tweet.tweets} />
+      <Tweets tweets={tweets} />
     </div>
   );
 }
