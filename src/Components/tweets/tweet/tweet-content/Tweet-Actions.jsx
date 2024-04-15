@@ -4,29 +4,27 @@ import Like from "../../../../icons/Like";
 import Retweet from "../../../../icons/Retweet";
 import Share from "../../../../icons/Share";
 import TweetAction from "./tweet-actions/Tweet-Action";
-import { TweetContext } from "../../../../contexts/tweets";
+import { Context } from "../../../../contexts/tweets";
+import axios from "axios";
 
 export default function TweetActions() {
   const [state, setState] = useState(Array(4).fill(false));
-  const tweet = useContext(TweetContext);
-  const [action, setAction] = useState([
-    "true",
-    "true",
-    tweet.actions.state,
-    "true",
-  ]);
+  const tweet = useContext(Context);
+  const [action, setAction] = useState(tweet.actions.state);
 
-  const verify = (i) => {
+  const verify = (id) => {
     const newSvg = state.slice();
-    newSvg[i] = !newSvg[i];
+    newSvg[id] = !newSvg[id];
     setState(newSvg);
   };
-  const handleClick = (i) => {
-    const newAction = action.slice();
-    newAction[i] = action[i] == "true" ? "false" : "true";
-    setAction(newAction);
+  const handleClick = (id) => {
+    const data = { ...tweet };
+    data.actions.state = !data.actions.state;
+    axios
+      .put(`http://localhost:3000/tweets/${id}`, data)
+      .then((res) => setAction(res.data.actions.state))
+      .catch((err) => console.error(err));
   };
-  tweet.actions.state = action[2] == "true" ? "true" : "false";
   const acts = [
     {
       logo: (
@@ -43,7 +41,7 @@ export default function TweetActions() {
     {
       logo: (
         <Retweet
-          Csvg={state[1] && "#1df04022"}
+          Csvg={state[1] ? "#1df04022" : ""}
           color={state[1] ? "#1df040" : "#6E767D"}
         />
       ),
@@ -54,24 +52,24 @@ export default function TweetActions() {
     {
       logo: (
         <Like
-          Csvg={state[2] && "#f8358a22"}
+          Csvg={state[2] ? "#f8358a22" : ""}
           color={state[2] ? "#f8358a" : "#6E767D"}
-          like={tweet.actions.state}
+          like={action}
         />
       ),
       nbr:
         tweet.actions.like[tweet.actions.like.length - 1] == "k"
           ? tweet.actions.like
-          : tweet.actions.state == "false"
-          ? Number(tweet.actions.like) + 1
-          : Number(tweet.actions.like),
+          : tweet.actions.state
+          ? Number(tweet.actions.like)
+          : Number(tweet.actions.like) + 1,
       title: "Like",
       color: state[2] ? "#f8358a" : "#6E767D",
     },
     {
       logo: (
         <Share
-          Csvg={state[3] && "#1d52f022"}
+          Csvg={state[3] ? "#1d52f022" : ""}
           color={state[3] ? "#1d52f0" : "#6E767D"}
         />
       ),
@@ -86,7 +84,7 @@ export default function TweetActions() {
         <TweetAction
           key={i}
           action={e}
-          like={() => handleClick(i)}
+          like={() => handleClick(tweet.id)}
           verify={() => verify(i)}
         />
       ))}

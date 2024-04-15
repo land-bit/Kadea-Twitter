@@ -1,7 +1,6 @@
-export default function TweetEditorInput({ register, refs }) {
+export default function TweetEditorInput({ register }) {
   return (
     <input
-      ref={refs}
       type="text"
       name="Post"
       className="tweet-editor-input"
