@@ -5,7 +5,8 @@ import Tweet from "../Components/tweets/Tweet";
 
 export default function Profile() {
   const { userName } = useParams();
-  const { tweets } = useContext(Context);
+  const { tweets: tweetData } = useContext(Context);
+  const tweets = [...tweetData];
   return (
     tweets && (
       <div>
@@ -13,6 +14,7 @@ export default function Profile() {
           Profil de @{userName}
         </h1>
         {tweets
+          .reverse()
           .filter((e) => e.user.userName == userName)
           .map((el, i) => (
             <Tweet key={i} data={el} />
