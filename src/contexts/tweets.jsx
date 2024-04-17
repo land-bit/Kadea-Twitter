@@ -25,15 +25,15 @@ const TweetContext = ({ children }) => {
   const { data: trendData } = useFetch(
     "https://json-server-from-kadea-tweet.vercel.app/trends"
   );
-  const [trend, setTrend] = useState(null);
+  const [trends, setTrend] = useState(null);
   useEffect(() => setTrend(trendData), [trendData]);
 
   return (
     tweets &&
     current &&
     nav &&
-    trend && (
-      <Context.Provider value={{ tweets, setTweets, current, nav, trend }}>
+    trends && (
+      <Context.Provider value={{ tweets, setTweets, current, nav, trends }}>
         {children}
       </Context.Provider>
     )
