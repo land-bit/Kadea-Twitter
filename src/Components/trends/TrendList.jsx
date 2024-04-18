@@ -4,7 +4,7 @@ import TrendBody from "./trend-list/TrendBody";
 import { Context } from "../../contexts/tweets";
 export default function TrendList() {
   const { trends } = useContext(Context);
-  return (
+  return (trends&&
     <div className="bg-[#202327] px-[2.5vw] w-[90%] rounded-[30px] m-[2vh] pb-2">
       <TrendTitle />
       {trends.map((e, i) => (
