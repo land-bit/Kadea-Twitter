@@ -5,25 +5,25 @@ export const Context = createContext(null);
 
 const TweetContext = ({ children }) => {
   const { data: tweetData } = useFetch(
-    "https://json-server-from-kadea-tweet.vercel.app/tweets"
+    "https://json-server-from-kadea-tweet.onrender.com/tweets"
   );
   const [tweets, setTweets] = useState(null);
   useEffect(() => setTweets(tweetData), [tweetData]);
 
   const { data: currentData } = useFetch(
-    "https://json-server-from-kadea-tweet.vercel.app/current-user"
+    "https://json-server-from-kadea-tweet.onrender.com/current-user"
   );
   const [current, setCurrent] = useState(null);
   useEffect(() => setCurrent(currentData), [currentData]);
 
   const { data: navData } = useFetch(
-    "https://json-server-from-kadea-tweet.vercel.app/nav"
+    "https://json-server-from-kadea-tweet.onrender.com/nav"
   );
   const [nav, setNav] = useState(null);
   useEffect(() => setNav(navData), [navData]);
 
   const { data: trendData } = useFetch(
-    "https://json-server-from-kadea-tweet.vercel.app/trends"
+    "https://json-server-from-kadea-tweet.onrender.com/trends"
   );
   const [trends, setTrend] = useState(null);
   useEffect(() => setTrend(trendData), [trendData]);

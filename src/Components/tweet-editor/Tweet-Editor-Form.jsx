@@ -26,7 +26,10 @@ export default function TweetEditorForm() {
       },
     };
     axios
-      .post("https://json-server-from-kadea-tweet.vercel.app/tweets", newTweet)
+      .post(
+        "https://json-server-from-kadea-tweet.onrender.com/tweets",
+        newTweet
+      )
       .then((response) => {
         setTweets([...tweets, response.data]);
       })

@@ -21,7 +21,10 @@ export default function TweetActions() {
     const data = { ...tweet };
     data.actions.state = !data.actions.state;
     axios
-      .put(`https://json-server-from-kadea-tweet.vercel.app/tweets/${id}`, data)
+      .put(
+        `https://json-server-from-kadea-tweet.onrender.com/tweets/${id}`,
+        data
+      )
       .then((res) => setAction(res.data.actions.state))
       .catch((err) => console.error(err));
   };
