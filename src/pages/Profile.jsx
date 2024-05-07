@@ -14,7 +14,6 @@ export default function Profile() {
           Profil de @{userName}
         </h1>
         {tweets
-          .reverse()
           .filter((e) => e.user.userName == userName)
           .map((el, i) => (
             <Tweet key={i} data={el} />

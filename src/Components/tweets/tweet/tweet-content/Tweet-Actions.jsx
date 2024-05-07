@@ -5,28 +5,21 @@ import Retweet from "../../../../icons/Retweet";
 import Share from "../../../../icons/Share";
 import TweetAction from "./tweet-actions/Tweet-Action";
 import { Context } from "../../../../contexts/tweets";
-import axios from "axios";
 
 export default function TweetActions() {
   const [state, setState] = useState(Array(4).fill(false));
   const tweet = useContext(Context);
-  const [action, setAction] = useState(tweet.actions.state);
+  const [action, setAction] = useState(Array(4).fill(false));
 
   const verify = (id) => {
     const newSvg = state.slice();
     newSvg[id] = !newSvg[id];
     setState(newSvg);
   };
-  const handleClick = (id) => {
-    const data = { ...tweet };
-    data.actions.state = !data.actions.state;
-    axios
-      .put(
-        `https://json-server-from-kadea-tweet.onrender.com/tweets/${id}`,
-        data
-      )
-      .then((res) => setAction(res.data.actions.state))
-      .catch((err) => console.error(err));
+  const handleClick = () => {
+    const newAction = action.slice();
+    newAction[2] = !newAction[2];
+    setAction(newAction);
   };
   const acts = [
     {
@@ -57,13 +50,13 @@ export default function TweetActions() {
         <Like
           Csvg={state[2] ? "#f8358a22" : ""}
           color={state[2] ? "#f8358a" : "#6E767D"}
-          like={action}
+          like={action[2]}
         />
       ),
       nbr:
         tweet.actions.like[tweet.actions.like.length - 1] == "k"
           ? tweet.actions.like
-          : tweet.actions.state
+          : !action[2]
           ? Number(tweet.actions.like)
           : Number(tweet.actions.like) + 1,
       title: "Like",
@@ -87,7 +80,7 @@ export default function TweetActions() {
         <TweetAction
           key={i}
           action={e}
-          like={() => handleClick(tweet.id)}
+          like={handleClick}
           verify={() => verify(i)}
         />
       ))}

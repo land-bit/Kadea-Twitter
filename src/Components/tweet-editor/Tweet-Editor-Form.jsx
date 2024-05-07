@@ -15,23 +15,10 @@ export default function TweetEditorForm() {
   const { tweets, setTweets, current } = useContext(Context);
 
   const onSubmit = (dataForm) => {
-    const newTweet = {
-      user: current,
-      content: dataForm,
-      actions: {
-        comments: 0,
-        retweet: 0,
-        like: 0,
-        state: true,
-      },
-    };
     axios
-      .post(
-        "https://json-server-from-kadea-tweet.onrender.com/tweets",
-        newTweet
-      )
+      .post("https://twitter-backend-w3ls.onrender.com/tweets", dataForm)
       .then((response) => {
-        setTweets([...tweets, response.data]);
+        setTweets(response.data);
       })
       .catch((error) => console.error(error));
     reset();

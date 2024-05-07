@@ -7,7 +7,7 @@ export default function Tweets() {
   const tweet = [...tweets];
   return (
     <div className="tweets">
-      {tweet.reverse().map((e, i) => (
+      {tweet.map((e, i) => (
         <Tweet key={i} data={e} />
       ))}
     </div>
